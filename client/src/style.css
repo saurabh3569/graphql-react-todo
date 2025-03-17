@@ -1,0 +1,542 @@
+/******************************
+ * Global & Common Styles
+ ******************************/
+ body {
+    margin: 0;
+    font-family: Arial, sans-serif; /* Assuming a default font */
+  }
+  
+  /******************************
+   * List Page Styles
+   ******************************/
+  
+  /* Main container for list */
+  .cards-wrapper {
+    padding: 50px 30px;
+    background-color: #f5f5f5;
+    min-height: 100vh;
+  }
+  
+  /* Title styling */
+  .todo-title {
+    text-align: center;
+    font-size: 36px;
+    color: #2d3436;
+    margin: 0 0 40px 0;
+    font-weight: 600;
+    letter-spacing: 1px;
+  }
+  
+  /* Cards grid container */
+  .cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 25px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  /* Individual card */
+  .styled-card {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 25px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease;
+    cursor: pointer;
+  }
+  
+  .styled-card:hover {
+    transform: scale(1.02);
+  }
+  
+  /* Card header (ID) */
+  .card-id {
+    font-size: 16px;
+    color: #e63946;
+    font-weight: bold;
+    margin-bottom: 15px;
+    background-color: #ffe6e6;
+    padding: 8px 15px;
+    border-radius: 5px;
+    display: inline-block;
+  }
+  
+  /* Card content */
+  .card-title {
+    font-size: 20px;
+    color: #2d3436;
+    margin: 0 0 12px 0;
+    font-weight: 500;
+    line-height: 1.4;
+  }
+  
+  .card-user {
+    font-size: 16px;
+    color: #636e72;
+    margin: 0;
+    font-weight: 400;
+  }
+  
+  /******************************
+   * Detail Page Common Styles
+   ******************************/
+  .detail-wrapper {
+    padding: 50px 30px;
+    background-color: #f5f5f5;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .detail-title {
+    font-size: 36px;
+    color: #2d3436;
+    margin-bottom: 40px;
+  }
+  
+  .detail-card {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+  }
+  
+  .detail-id {
+    font-size: 18px;
+    color: #e63946;
+    font-weight: bold;
+    background-color: #ffe6e6;
+    padding: 10px 15px;
+    border-radius: 5px;
+    display: inline-block;
+    margin-bottom: 20px;
+  }
+  
+  .detail-title-text {
+    font-size: 24px;
+    color: #2d3436;
+    margin: 0 0 20px 0;
+    font-weight: 500;
+  }
+  
+  /******************************
+   * Todo Detail Specific Styles
+   ******************************/
+  .todo-info-grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 15px;
+    margin: 20px 0;
+    padding: 15px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  }
+  
+  /******************************
+   * User Detail Specific Styles
+   ******************************/
+  .user-info-grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 15px;
+    margin: 20px 0;
+    padding: 15px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  }
+  
+  .detail-user {
+    font-size: 18px;
+    color: #636e72;
+    margin: 10px 0;
+  }
+  
+  .detail-status {
+    font-size: 18px;
+    color: #636e72;
+    margin: 0 0 10px 0;
+  }
+  
+  .detail-section {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+  }
+  
+  .detail-section h3 {
+    font-size: 20px;
+    color: #2d3436;
+    margin: 0 0 10px 0;
+    font-weight: 600;
+  }
+  
+  .detail-section p {
+    font-size: 16px;
+    color: #636e72;
+    margin: 5px 0;
+  }
+  
+  /******************************
+   * Common Grid Item Styles
+   ******************************/
+  .info-item {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .info-label {
+    font-size: 16px;
+    color: #2d3436;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  
+  .info-value {
+    font-size: 18px;
+    color: #636e72;
+    margin-top: 5px;
+    word-break: break-word;
+  }
+  
+  /******************************
+   * Button Styles
+   ******************************/
+  .button-section {
+    margin-top: 20px;
+    display: flex;
+    justify-content: flex-start;
+  }
+  
+  .user-button {
+    padding: 10px 20px;
+    background-color: #4a90e2;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .user-button:hover {
+    background-color: #357abd;
+  }
+  
+  .button-container {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .back-button {
+    padding: 12px 25px;
+    background-color: #e63946;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .back-button:hover {
+    background-color: #d62828;
+  }
+  
+  /******************************
+   * Responsive Design
+   ******************************/
+  @media (max-width: 600px) {
+    /* List Page */
+    .cards-wrapper {
+      padding: 30px 20px;
+    }
+  
+    .todo-title {
+      font-size: 28px;
+      margin-bottom: 30px;
+    }
+  
+    .cards-container {
+      grid-template-columns: 1fr;
+    }
+  
+    .styled-card {
+      padding: 20px;
+    }
+  
+    .card-title {
+      font-size: 18px;
+    }
+  
+    .card-user {
+      font-size: 14px;
+    }
+  
+    .card-id {
+      font-size: 14px;
+    }
+  
+    /* Detail Page */
+    .detail-wrapper {
+      padding: 30px 20px;
+    }
+  
+    .detail-title {
+      font-size: 28px;
+      margin-bottom: 30px;
+    }
+  
+    .detail-card {
+      padding: 20px;
+    }
+  
+    .detail-id {
+      font-size: 14px;
+    }
+  
+    .detail-title-text {
+      font-size: 18px;
+    }
+  
+    .detail-user,
+    .detail-status {
+      font-size: 14px;
+    }
+  
+    .todo-info-grid,
+    .user-info-grid {
+      grid-template-columns: 1fr;
+      gap: 10px;
+      padding: 10px;
+    }
+  
+    .info-label {
+      font-size: 14px;
+    }
+  
+    .info-value {
+      font-size: 16px;
+    }
+  
+    .detail-section h3 {
+      font-size: 18px;
+    }
+  
+    .detail-section p {
+      font-size: 14px;
+    }
+  
+    /* Buttons */
+    .user-button {
+      padding: 8px 16px;
+      font-size: 14px;
+    }
+  
+    .back-button {
+      padding: 10px 20px;
+      font-size: 14px;
+    }
+  }
+
+  /******************************
+ * Detail Page Common Styles
+ ******************************/
+.detail-wrapper {
+    padding: 50px 30px;
+    background-color: #f5f5f5;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .detail-title {
+    font-size: 36px;
+    color: #2d3436;
+    margin-bottom: 40px;
+  }
+  
+  .detail-card {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+  }
+  
+  .detail-id {
+    font-size: 18px;
+    color: #e63946;
+    font-weight: bold;
+    background-color: #ffe6e6;
+    padding: 10px 15px;
+    border-radius: 5px;
+    display: inline-block;
+    margin-bottom: 20px;
+  }
+  
+  .detail-title-text {
+    font-size: 24px;
+    color: #2d3436;
+    margin: 0 0 20px 0;
+    font-weight: 500;
+    line-height: 1.4;
+  }
+  
+  /******************************
+   * Todo Detail Specific Styles
+   ******************************/
+  .todo-info-section {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  }
+  
+  .section-title {
+    font-size: 20px;
+    color: #2d3436;
+    margin: 0 0 15px 0;
+    font-weight: 600;
+  }
+  
+  .info-grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 15px;
+  }
+  
+  /******************************
+   * Common Grid Item Styles
+   ******************************/
+  .info-item {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .info-label {
+    font-size: 16px;
+    color: #2d3436;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  
+  .info-value {
+    font-size: 18px;
+    color: #636e72;
+    margin-top: 5px;
+    word-break: break-word;
+  }
+  
+  /******************************
+   * Button Styles
+   ******************************/
+  .button-section {
+    margin-top: 20px;
+    display: flex;
+    justify-content: flex-start;
+  }
+  
+  .user-button {
+    padding: 10px 20px;
+    background-color: #4a90e2;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .user-button:hover {
+    background-color: #357abd;
+  }
+  
+  .button-container {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .back-button {
+    padding: 12px 25px;
+    background-color: #e63946;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .back-button:hover {
+    background-color: #d62828;
+  }
+  
+  /******************************
+   * Responsive Design
+   ******************************/
+  @media (max-width: 600px) {
+    .detail-wrapper {
+      padding: 30px 20px;
+    }
+  
+    .detail-title {
+      font-size: 28px;
+      margin-bottom: 30px;
+    }
+  
+    .detail-card {
+      padding: 20px;
+    }
+  
+    .detail-id {
+      font-size: 14px;
+    }
+  
+    .detail-title-text {
+      font-size: 18px;
+    }
+  
+    .todo-info-section {
+      padding: 10px;
+    }
+  
+    .section-title {
+      font-size: 18px;
+    }
+  
+    .info-grid {
+      grid-template-columns: 1fr;
+      gap: 10px;
+    }
+  
+    .info-label {
+      font-size: 14px;
+    }
+  
+    .info-value {
+      font-size: 16px;
+    }
+  
+    .user-button {
+      padding: 8px 16px;
+      font-size: 14px;
+    }
+  
+    .back-button {
+      padding: 10px 20px;
+      font-size: 14px;
+    }
+  }
